@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Gopa Singh — Portfolio</title>
+  <meta name="description" content="Gopa Singh — B.Tech Graduate (2025). Front-end developer. Projects: E-Commerce Dashboard, SuperStore Dashboard, Sales Analysis."/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#1f57c8; --card:#0f1724; --muted:#9aa4b2; --accent:#ff7a7a; --accent-2:#7dd3fc; --glass:rgba(255,255,255,0.03);
+      --white:#eef2ff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Arial;background: url('bg.jpg.png') no-repeat center center fixed;background-size: cover;;color:var(--white);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:28px auto;padding:28px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#ffd6d6,#ffd1b3);display:grid;place-items:center;color:#111;font-weight:800;font-family:Rubik}
+    .name{font-weight:700;font-size:18px}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);padding:8px 10px;border-radius:8px;font-weight:600}
+    nav a:hover{background:var(--glass);color:var(--white)}
+    .cta{background:linear-gradient(90deg,var(--accent),#f14515);padding:8px 12px;border-radius:10px;color:#e73f3f;font-weight:700}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center;margin-top:22px}
+    h1{font-size:28px;margin:0;line-height:1.05}
+    p.lead{color:var(--muted);margin:10px 0 18px}
+    .buttons{display:flex;gap:10px}
+    .btn{padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--white);font-weight:700;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#ffb199);color:#111}
+    .card{background:linear-gradient(180deg, rgba(0, 202, 54, 0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.4)}
+    .avatar{width:96px;height:96px;border-radius:12px;background:linear-gradient(135deg,#f1cf49,#ee6a6a);display:grid;place-items:center;color:#111;font-weight:800;font-size:30px}
+    .meta small{color:var(--muted)}
+    /* Sections */
+    section{margin-top:28px}
+    .section-title{display:flex;justify-content:space-between;align-items:center}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px}
+    .project{background:linear-gradient(180deg,#071326,#0b1320);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .thumb{height:120px;border-radius:8px;background:linear-gradient(135deg,var(--accent-2),#60a5fa);display:grid;place-items:center;font-weight:800;color:#041a1f}
+    .project h4{margin:10px 0 6px}
+    .muted{color:var(--muted)}
+    .skills{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-weight:700;color:var(--white)}
+    .row{display:flex;gap:12px;align-items:center}
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--white);resize:none}
+    .submit{background:var(--accent);color:#111;padding:10px;border-radius:10px;border:none;font-weight:800;cursor:pointer}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.projects{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}}
+    @media (max-width:560px){.projects{grid-template-columns:1fr}}
+    /* modal */
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:50}
+    .modal.open{display:flex}
+    .modal-card{background:#071326;padding:18px;border-radius:12px;max-width:700px;width:92%}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">GS</div>
+        <div>
+          <div class="name">Gopa Singh</div>
+          <div class="small muted">B.Tech Graduate (2025) • Front-end Developer/Data analytics • Bangalore, Karnataka</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+       <a class="cta" href="2116761_GopaSingh.pdf (5).pdf" download="Gopa_Singh_Resume.pdf">Download CV</a>
+
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Hi, I'm <span style="color:var(--accent)">Gopa</span> — Front-end developer & B.Tech Graduate.</h1>
+          <p class="lead">I build responsive websites, dashboards and small web apps using HTML, CSS, JavaScript and Python. Seeking internships / entry-level roles in web development or analytics.</p>
+          <div class="buttons">
+            <a class="btn primary" href="#projects">See Projects</a>
+            <a class="btn" href="#contact">Contact Me</a>
+          </div>
+
+          <!-- Quick facts -->
+          <div style="margin-top:18px" class="row">
+            <div class="card" style="padding:12px;">
+              <div style="font-weight:800">Location</div>
+              <div class="small muted">Patna, India</div>
+            </div>
+            <div class="card" style="padding:12px;">
+              <div style="font-weight:800">Available</div>
+              <div class="small muted">Open for internships & projects</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card" style="text-align:center">
+            <div class="avatar">
+  <img src="gopa.jpg.jpg" alt="Gopa Singh" style="width:100%;height:100%;border-radius:12px;object-fit:cover;">
+</div>
+
+          
+          <div style="margin-top:12px;font-weight:700">Gopa Singh</div>
+          <small class="muted">Front-end Developer</small>
+
+          <div class="skills" style="justify-content:center;margin-top:12px">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">MongoDB</div>
+            <div class="skill">Streamlit</div>
+          </div>
+
+          <div style="margin-top:12px" class="small muted">Email: <a href="mailto:gopa@example.com">gopa@example.com</a></div>
+          <div class="small muted">LinkedIn: <a href="https://www.linkedin.com/in/gopa-singh-146b5a225" target="_blank">gopa-singh</a></div>
+          <div style="margin-top:8px"><a class="btn" href="https://github.com/GOPAsingh" target="_blank">View GitHub</a></div>
+        </aside>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="section-title">
+          <h3>About Me</h3>
+          <div class="small muted">Who I am</div>
+        </div>
+        <p class="small muted">I completed my B.Tech in 2025 and I am a fresher seeking roles in web development or data analytics. I have built dashboards, data-visualisation projects and small web apps using JS, Python, Streamlit and databases. I enjoy clean UI and practical problem solving.</p>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="section-title">
+          <h3>Featured Projects</h3>
+          <div class="small muted">3 projects • source code linked</div>
+        </div>
+
+        <div class="projects">
+          <!-- Project 1 -->
+          <article class="project" data-title="E-Commerce Performance Dashboard" data-desc="Interactive E-Commerce performance dashboard showing sales, trends and KPIs (2024–2025). Built with JS and visualization libraries." data-link="https://github.com/GOPAsingh/E-Commerce-Performance-Dashboard.git" onclick="openModal(this)">
+            <div class="thumb">Dashboard</div>
+            <h4>E-Commerce Performance Dashboard</h4>
+            <p class="muted">Short: Sales analytics dashboard to track KPIs.</p>
+            <p class="small muted"><strong>Tech:</strong> JavaScript, Chart libraries, CSV/Excel data</p>
+            <p class="small muted"><strong>Role:</strong> Built frontend charts, processed data and created interactive filters.</p>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project" data-title="SuperStore Sales Dashboard" data-desc="Retail SuperStore sales dashboard with store/product filters and visual insights." data-link="https://github.com/GOPAsingh/SuperStore-Sales-Dashboard.git" onclick="openModal(this)">
+            <div class="thumb">SuperStore</div>
+            <h4>SuperStore Sales Dashboard</h4>
+            <p class="muted">Short: Store-wise and product-wise sales performance.</p>
+            <p class="small muted"><strong>Tech:</strong> JS, Data visualization</p>
+            <p class="small muted"><strong>Role:</strong> Visualized trends, created drill-down charts.</p>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project" data-title="Big Store Annual Sales Analysis" data-desc="Annual sales analysis for 2024 & 2025 with trend comparisons and recommendations." data-link="https://github.com/GOPAsingh/Big-Store-Annual-Sales-performance-for-2024-and-2025.git" onclick="openModal(this)">
+            <div class="thumb">Analysis</div>
+            <h4>Big Store Annual Sales Analysis</h4>
+            <p class="muted">Short: Year-over-year comparison & insights.</p>
+            <p class="small muted"><strong>Tech:</strong> Python, Excel/CSV, Charts</p>
+            <p class="small muted"><strong>Role:</strong> Data cleaning, trend analysis and visual reports.</p>
+          </article>
+        </div>
+
+        <!-- Template for additional projects (portfolio, chatbot UI) -->
+        <div style="margin-top:14px; display:flex;gap:12px;flex-wrap:wrap">
+          <div class="project" style="width:calc(33% - 8px);" data-title="Portfolio Website" data-desc="This portfolio built with HTML/CSS/JS — responsive single page." onclick="openModal(this)">
+            <div class="thumb">Portfolio</div>
+            <h4>Portfolio Website</h4>
+            <p class="muted">Responsive single-page portfolio with projects and contact form.</p>
+          </div>
+
+          <div class="project" style="width:calc(33% - 8px);" data-title="Chatbot UI" data-desc="Frontend UI for an admission chatbot (Streamlit/React) — interface & history." onclick="openModal(this)">
+            <div class="thumb">Chatbot</div>
+            <h4>Chatbot UI</h4>
+            <p class="muted">Frontend interface for chatbot interactions and history management.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="section-title">
+          <h3>Skills</h3>
+          <div class="small muted">Technologies & Tools</div>
+        </div>
+        <div style="margin-top:12px">
+          <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React (learning)</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">MongoDB</div>
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Excel</div>
+            <div class="skill">Streamlit</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE & EDUCATION -->
+      <section id="experience">
+        <div class="section-title">
+          <h3>Experience & Education</h3>
+          <div class="small muted">Internships / Academic</div>
+        </div>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
+          <div class="card" style="flex:1;min-width:260px">
+            <div style="font-weight:800">Intern — Zieers System Pvt. Ltd.</div>
+            <div class="small muted">May 2024 — Jun 2024</div>
+            <div class="small muted" style="margin-top:6px">Worked on front-end tasks and small features, UI fixes, and testing.</div>
+          </div>
+
+          <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
+          <div class="card" style="flex:1;min-width:260px">
+            <div style="font-weight:800">Intern — Banasthali University,Rajasthan</div>
+            <div class="small muted"> Jan 2025-Jun 2025</div>
+            <div class="small muted" style="margin-top:6px">Working onLLMs project and also “Presented research paper on ‘Development of an Admission Chatbot for a University Using LLMs’ 
+                 at ICTIS 2025, Bangkok; selected for publication in Springer.”</div>
+          </div>
+
+          <div class="card" style="flex:1;min-width:260px">
+            <div style="font-weight:800">B.Tech — Banasthali Vidyapith</div>
+            <div class="small muted">Graduated 2025</div>
+            <div class="small muted" style="margin-top:6px">Relevant: Data Structures, Web Development, DBMS. CGPA: 8.32</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACHIEVEMENTS -->
+      <section id="achievements">
+        <div class="section-title">
+          <h3>Achievements & Certificates</h3>
+          <div class="small muted">Selected</div>
+        </div>
+        <ul class="small muted" style="margin-top:12px">
+          <li>National Volleyball Player (Represented at national level)</li>
+          <li>Participation certificate in State Science Exhibition</li>
+          <li>B Certificate — NCC</li>
+        </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="section-title">
+          <h3>Contact</h3>
+          <div class="small muted">Let's connect</div>
+        </div>
+
+        <div class="contact-grid" style="margin-top:12px">
+          <form id="contactForm">
+            <label class="small muted">Your name</label>
+            <input type="text" id="name" placeholder="Your name" required/>
+            <label class="small muted" style="margin-top:8px">Your email</label>
+            <input type="email" id="email" placeholder="name@example.com" required/>
+            <label class="small muted" style="margin-top:8px">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell me about the project..." required></textarea>
+            <div style="margin-top:10px;display:flex;gap:10px;align-items:center">
+              <button type="submit" class="submit">Send Message</button>
+              <div id="formStatus" style="color:var(--muted);font-weight:700"></div>
+            </div>
+          </form>
+
+          <aside class="card">
+            <div style="font-weight:800">Get in touch</div>
+            <div class="small muted" style="margin-top:8px">Email: <a href="mailto:gopa@example.com">gopa@example.com</a></div>
+            <div class="small muted" style="margin-top:6px">LinkedIn: <a href="https://www.linkedin.com/in/gopa-singh-146b5a225" target="_blank">gopa-singh</a></div>
+            <div class="small muted" style="margin-top:6px">GitHub: <a href="https://github.com/GOPAsingh" target="_blank">GOPAsingh</a></div>
+            <div style="margin-top:12px"><a class="btn" href="resume.pdf" download>Download Resume</a></div>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="small muted">Built with ❤️ • 2025 • <span style="opacity:.8">Saved as index.html</span></div>
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" onclick="if(event.target.id==='modal') closeModal()">
+    <div class="modal-card">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <h3 id="modalTitle">Project</h3>
+          <div id="modalSub" class="small muted">Details</div>
+        </div>
+        <button onclick="closeModal()" style="background:transparent;border:none;color:var(--muted);font-weight:800;cursor:pointer">✕</button>
+      </div>
+      <div id="modalDesc" style="margin-top:12px;color:var(--muted)"></div>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <a id="modalView" class="btn" href="#" target="_blank">View live</a>
+        <a id="modalSource" class="btn" href="#" target="_blank">Source code</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // resume download
+    document.getElementById('downloadResume').addEventListener('click', ()=>{
+      const link = document.createElement('a');
+      link.href = 'resume.pdf';
+      link.download = 'Gopa_Singh_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    });
+
+    // modal logic
+    function openModal(el){
+      const title = el.getAttribute('data-title') || 'Project';
+      const desc = el.getAttribute('data-desc') || '';
+      const link = el.getAttribute('data-link') || '';
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalDesc').innerText = desc;
+      document.getElementById('modalSub').innerText = 'Project summary and links';
+      const view = document.getElementById('modalView');
+      const src = document.getElementById('modalSource');
+      if(link){
+        view.href = link; src.href = link;
+        view.style.opacity = '1'; src.style.opacity = '1';
+      } else {
+        view.href = '#'; src.href = '#'; view.style.opacity='0.6'; src.style.opacity='0.6';
+      }
+      document.getElementById('modal').classList.add('open');
+    }
+    function closeModal(){ document.getElementById('modal').classList.remove('open'); }
+
+    // contact form (demo)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const n = document.getElementById('name').value.trim();
+      const em = document.getElementById('email').value.trim();
+      const m = document.getElementById('message').value.trim();
+      if(!n || !em || !m){ alert('Please fill all fields'); return; }
+      if(!/^\S+@\S+\.\S+$/.test(em)){ alert('Enter valid email'); return; }
+      document.getElementById('formStatus').innerText = 'Sending...';
+      setTimeout(()=>{ document.getElementById('formStatus').innerText = 'Message sent ✔️'; document.getElementById('contactForm').reset(); },800);
+    });
+
+    // small accessibility: ESC to close modal
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+  </script>
+</body>
+</html>
+
